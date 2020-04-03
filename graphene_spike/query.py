@@ -1,4 +1,6 @@
-from graphene import ObjectType, String, Schema, Int
+# pylint: disable=unused-argument
+
+from graphene import ObjectType, String, Int
 
 
 class Query(ObjectType):
@@ -8,8 +10,8 @@ class Query(ObjectType):
 
     # our Resolver method takes the GraphQL context (root, info) as well as
     # Argument (name) for the Field and returns data for the query Response
-    def resolve_hello(root, info, name, age):
+    def resolve_hello(self, info, name, age):
         return f'Hello {name}, you have {age} !'
 
-    def resolve_goodbye(root, info):
+    def resolve_goodbye(self, info):
         return 'See ya!'

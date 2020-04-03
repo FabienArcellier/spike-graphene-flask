@@ -145,7 +145,8 @@ disable=missing-docstring,
         xreadlines-attribute,
         deprecated-sys-function,
         exception-escape,
-        comprehension-escape
+        comprehension-escape,
+        no-self-argument
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -414,7 +415,7 @@ method-naming-style=snake_case
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style.
-method-rgx=[a-z_][_]?[a-zA-Z0-9]*[_]{0,2}$
+# method-rgx=[a-z_][_]?[a-zA-Z0-9]*[_]{0,2}$
 
 # Naming style matching correct module names.
 module-naming-style=snake_case

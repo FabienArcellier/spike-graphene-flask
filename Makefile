@@ -1,4 +1,4 @@
-APPLICATION_MODULE=mycommand
+APPLICATION_MODULE=graphene_spike
 TEST_MODULE=$(APPLICATION_MODULE)_tests
 
 .PHONY: activate
@@ -50,11 +50,7 @@ lint: ## run pylint
 	pipenv run pylint --rcfile=.pylintrc $(APPLICATION_MODULE)
 
 .PHONY: tests
-tests: tests_units tests_acceptances ## run automatic tests
-
-.PHONY: tests_units
-tests_units: ## run only unit tests
-	pipenv run python -u -m unittest discover "$(TEST_MODULE)/units"
+tests: tests_acceptances ## run automatic tests
 
 .PHONY: tests_acceptances
 tests_acceptances: ## run only acceptance tests

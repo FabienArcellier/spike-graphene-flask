@@ -13,8 +13,16 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 ```bash
 python -m graphene_spike.cli graphene_cli
+```
 
+2. Use web application developped in flask
+
+```bash
 python -m graphene_spike.cli graphene_webapp
+```
+
+```bash
+curl -XPOST http://localhost:5000/ -H "Content-Type: application/json" -d '{ hello(name: "GraphQL", age: 25) }'
 ```
 
 ## The latest version
