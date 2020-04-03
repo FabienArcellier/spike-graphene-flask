@@ -13,10 +13,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def query():
     schema = Schema(query=Query)
-    graphql_query = request.data.decode('utf-8')
-    result = schema.execute(graphql_query)
+    graphql_req = request.json
+    result = schema.execute(graphql_req['query'])
     return json.dumps(result.data)
 
-
 def start_flask():
-    app.run(debug=True)
+    app.run()
