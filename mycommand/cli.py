@@ -4,22 +4,32 @@
 from __future__ import print_function
 
 import click
-from mycommand.utils import hello
+from graphene import Schema
+from mycommand.query import Query
 
 
 @click.group()
 def cli():
     pass
 
+@click.command('graphene')
+def graphene():
+    schema = Schema(query=Query)
 
-@click.command('command1')
-@click.option('--name')
-def command1(name):
-    hello_name = hello(name)
-    print(hello_name)
+    query_string = '{ hello }'
+    result = schema.execute(query_string)
+    print(result.data['hello'])
+
+    query_with_argument = '{ hello(name: "GraphQL") }'
+    result = schema.execute(query_with_argument)
+    print(result.data['hello'])
+
+    query_string = '{ goodbye }'
+    result = schema.execute(query_string)
+    print(result.data['goodbye'])
 
 
-cli.add_command(command1)
+cli.add_command(graphene)
 
 if __name__ == '__main__':
     cli()

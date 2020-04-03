@@ -2,26 +2,13 @@
 
 [![Build Status](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python.svg?branch=master)](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python)
 
-blueprint to implement a multi commands in python. This command can be install
-on remote system or CI with pip
+The goal of this spike is to implement GraphQL API based on `graphene`.
 
-* execute operation in CI
-* execute command for user
-* install a new command on OS
-* ...
-
-The implementation is compatible with python2.7 and python3.6
+* [GraphQL in Python Made Easy](https://graphene-python.org/)
+* [Build a Super Simple GraphQL Server in Flask with Graphene](https://www.youtube.com/watch?v=oQc7DC3srNM)
 
 ## Getting started
 
-1. clone this repository
-
-2. remove .git directory
-
-3. use your library identifier as module name
-
-    * replace `mycommand`, `mycommand_tests` by your own identifier
-    * you have to change as well inside `Makefile`, `.coveragerc`, `tox.ini` and `setup.py`
 
 ## The latest version
 
