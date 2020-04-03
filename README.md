@@ -9,6 +9,11 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 ## Getting started
 
+1. use graphene directly from the cli
+
+```bash
+python -m graphene_spike.cli graphene_cli
+```
 
 ## The latest version
 
@@ -16,17 +21,6 @@ You can find the latest version to ...
 
 ```bash
 git clone https://github.com/FabienArcellier/blueprint-cli-multicommands-python.git
-```
-
-## Usage
-
-You can run the application with the following command
-
-```bash
-python -m mycommand.cli command1 --name fabien
-
-# inside a virtualenv or after installation with pip
-mycommand command1 --name fabien
 ```
 
 ## Developper guideline

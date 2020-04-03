@@ -4,7 +4,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 setup(
-    name='mycommand',
+    name='graphene_spike',
     version='1.0.0',
     packages=find_packages(exclude=["*_tests"]),
     license='MIT license',
@@ -12,7 +12,7 @@ setup(
     long_description_content_type='text/markdown',
     entry_points = {
         'console_scripts': [
-            'mycommand = mycommand.cli:cli',
+            'graphene_spike = graphene_spike.cli:cli',
         ],
     },
     install_requires = [

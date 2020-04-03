@@ -1,5 +1,6 @@
 from graphene import ObjectType, String, Schema
 
+
 class Query(ObjectType):
     # this defines a Field `hello` in our Schema with a single Argument `name`
     hello = String(name=String(default_value="stranger"))

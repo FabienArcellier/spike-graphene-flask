@@ -12,8 +12,9 @@ from mycommand.query import Query
 def cli():
     pass
 
-@click.command('graphene')
-def graphene():
+
+@click.command('graphene_cli')
+def graphene_cli():
     schema = Schema(query=Query)
 
     query_string = '{ hello }'
@@ -29,7 +30,7 @@ def graphene():
     print(result.data['goodbye'])
 
 
-cli.add_command(graphene)
+cli.add_command(graphene_cli)
 
 if __name__ == '__main__':
     cli()

@@ -4,10 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-mycommand = {editable = true,extras = ["dev"],path = "."}
+graphene_spike = {editable = true,extras = ["dev"],path = "."}
 
 [packages]
-mycommand = {editable = true,path = "."}
+graphene_spike = {editable = true,path = "."}
 
 [requires]
 python_version = "3.6"
