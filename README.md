@@ -9,7 +9,7 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 ## Getting started
 
-1. use graphene directly from the cli
+1. I check I can use graphene as local api solver from the cli
 
 ```bash
 python -m graphene_spike.cli graphene_cli

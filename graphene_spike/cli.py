@@ -5,7 +5,7 @@ from __future__ import print_function
 
 import click
 from graphene import Schema
-from mycommand.query import Query
+from graphene_spike.query import Query
 
 
 @click.group()
@@ -21,7 +21,7 @@ def graphene_cli():
     result = schema.execute(query_string)
     print(result.data['hello'])
 
-    query_with_argument = '{ hello(name: "GraphQL") }'
+    query_with_argument = '{ hello(name: "GraphQL", age: 25) }'
     result = schema.execute(query_with_argument)
     print(result.data['hello'])
 
