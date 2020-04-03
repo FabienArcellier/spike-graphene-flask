@@ -6,6 +6,7 @@ from __future__ import print_function
 import click
 from graphene import Schema
 from graphene_spike.query import Query
+from graphene_spike.webapp import start_flask
 
 
 @click.group()
@@ -30,7 +31,13 @@ def graphene_cli():
     print(result.data['goodbye'])
 
 
+@click.command('graphene_webapp')
+def graphene_webapp():
+    start_flask()
+
 cli.add_command(graphene_cli)
+cli.add_command(graphene_webapp)
+
 
 if __name__ == '__main__':
     cli()

@@ -13,6 +13,8 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 ```bash
 python -m graphene_spike.cli graphene_cli
+
+python -m graphene_spike.cli graphene_webapp
 ```
 
 ## The latest version

@@ -18,6 +18,7 @@ setup(
     install_requires = [
         'click',
         'decorator',
+        'flask',
         'graphene'
     ],
     extras_require={
