@@ -1,4 +1,4 @@
-## blueprint-cli-multicommands-python
+## implement a graphql service with graphene
 
 [![Build Status](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python.svg?branch=master)](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python)
 
@@ -6,6 +6,7 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 * [GraphQL in Python Made Easy](https://graphene-python.org/)
 * [Build a Super Simple GraphQL Server in Flask with Graphene](https://www.youtube.com/watch?v=oQc7DC3srNM)
+* [flask-graphql](https://github.com/graphql-python/flask-graphql)
 
 ## Getting started
 
@@ -24,6 +25,11 @@ python -m graphene_spike.cli graphene_webapp
 ```bash
 curl -XPOST http://localhost:5000/ -H "Content-Type: application/json" -d '{ hello(name: "GraphQL", age: 25) }'
 ```
+
+3. Récupérer la documentation du endpoint graphql
+
+* Altair doesn't load the documentation, even if the query is done
+* [graphiql](https://github.com/graphql/graphiql) is embedded with automatic documentation witg ``flask_graphql``
 
 ## The latest version
 

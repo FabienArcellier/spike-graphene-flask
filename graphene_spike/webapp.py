@@ -2,7 +2,8 @@
 
 import json
 
-from flask import Flask, request
+from flask import Flask
+from flask_graphql import GraphQLView
 from graphene import Schema
 
 from graphene_spike.query import Query
@@ -10,12 +11,8 @@ from graphene_spike.query import Query
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST'])
-def query():
-    schema = Schema(query=Query)
-    graphql_req = request.json
-    result = schema.execute(graphql_req['query'])
-    return json.dumps(result.data)
+app.add_url_rule('/', view_func=GraphQLView.as_view('query', schema=Schema(query=Query), graphiql=True))
+
 
 def start_flask():
     app.run()

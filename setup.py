@@ -19,6 +19,7 @@ setup(
         'click',
         'decorator',
         'flask',
+        'flask_graphql',
         'graphene'
     ],
     extras_require={

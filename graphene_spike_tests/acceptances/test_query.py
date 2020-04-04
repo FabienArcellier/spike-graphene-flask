@@ -30,3 +30,23 @@ class MainTest(unittest.TestCase):
 
         # Assert
         self.assertEqual(executed['data'], {"hello": "Hello Fabien, you have 18 !"})
+
+    def test_hello_should_write_the_giving_age(self):
+        # Assign
+        query_string = '{ hello(age: 24) }'
+
+        # Acts
+        executed = self.client.execute(query_string)
+
+        # Assert
+        self.assertEqual(executed['data'], {"hello": "Hello stranger, you have 24 !"})
+
+    def test_goodbye_should_giving_a_response(self):
+        # Assign
+        query_string = '{ goodbye }'
+
+        # Acts
+        executed = self.client.execute(query_string)
+
+        # Assert
+        self.assertEqual(executed['data'], {"goodbye": "See ya!"})
