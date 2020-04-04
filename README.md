@@ -57,7 +57,7 @@ to implement this feature.
 You can find the latest version to ...
 
 ```bash
-git clone https://github.com/FabienArcellier/blueprint-cli-multicommands-python.git
+git clone git@github.com:FabienArcellier/spike-graphene-flask.git
 ```
 
 ## Developper guideline
