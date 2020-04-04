@@ -8,6 +8,10 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 * [Build a Super Simple GraphQL Server in Flask with Graphene](https://www.youtube.com/watch?v=oQc7DC3srNM)
 * [flask-graphql](https://github.com/graphql-python/flask-graphql)
 
+**Conclusion : I don't plan using graphene as graphql engine**
+
+* Testability of the system is a problem (see part 4). The graphql server and the business code layer are couplate together.
+
 ## Getting started
 
 ### 1. I check I can use graphene as local api solver from the cli
