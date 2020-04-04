@@ -10,17 +10,17 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 
 **Conclusion : I don't plan using graphene as graphql engine**
 
-* Testability of the system is a problem (see part 4). The graphql server and the business code layer are couplate together.
+* Testability of the system is a problem (see part 4). The graphql server and the business code layer are stick together.
 
 ## Getting started
 
-### 1. I check I can use graphene as local api solver from the cli
+### 1. I check I can use graphene as local api solver from the cli
 
 ```bash
 python -m graphene_spike.cli graphene_cli
 ```
 
-### 2. Usage : Use web application developped in flask
+### 2. Usage : Use web application developped in flask
 
 ```bash
 python -m graphene_spike.cli graphene_webapp
@@ -45,12 +45,12 @@ Another option is to inject the dependency container through a singleton (`very 
 
 `Schema` take a class instead of an instance ... :(((((
 
-### 5. Performance : Scalability on PaaS environment
+### 5. Performance : Scalability on PaaS environment
 
 Not evaluated, there is an overhead of 80ms in regards of Flask (100ms instead of 20ms). I am not
 confident with my evaluation here, it's just observation.
 
-### 6. Support of Subscription
+### 6. Support of Subscription
 
 Subscription is not well integrated due to limit of `WSGI` protocol of Flask and Django. I didn't try
 to implement this feature.
