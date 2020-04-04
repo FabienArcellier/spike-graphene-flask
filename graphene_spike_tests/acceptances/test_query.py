@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import Mock
 
 from graphene import Schema
 from graphene.test import Client
@@ -8,7 +9,8 @@ from graphene_spike.query import Query
 
 class MainTest(unittest.TestCase):
     def setUp(self):
-        self.schema = Schema(query=Query)
+        query = Query()
+        self.schema = Schema(query=query)
         self.client = client = Client(self.schema)
 
     def test_hello_should_work_without_argument(self):

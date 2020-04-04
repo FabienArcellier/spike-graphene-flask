@@ -16,7 +16,7 @@ The goal of this spike is to implement GraphQL API based on `graphene`.
 python -m graphene_spike.cli graphene_cli
 ```
 
-2. Use web application developped in flask
+2. Usage : Use web application developped in flask
 
 ```bash
 python -m graphene_spike.cli graphene_webapp
@@ -26,10 +26,29 @@ python -m graphene_spike.cli graphene_webapp
 curl -XPOST http://localhost:5000/ -H "Content-Type: application/json" -d '{ hello(name: "GraphQL", age: 25) }'
 ```
 
-3. Récupérer la documentation du endpoint graphql
+3. Documentation : Fetch the documentation in UI for API exploration
 
 * Altair doesn't load the documentation, even if the query is done
 * [graphiql](https://github.com/graphql/graphiql) is embedded with automatic documentation witg ``flask_graphql``
+
+4. Testability : Write acceptance tests to validate non regression of API
+
+* write end to end test in [test_query](acceptances/test_query.py)
+
+The support of dependency injection to ensure testability requires heavy trick (injection through contexe) : https://github.com/graphql-python/graphene/issues/837.
+The extension `Flask-graphql` doesn't allow that easily. The context is already used to forward the `request` instance from `Flask`.
+Another option is to inject the dependency container through a singleton (`very crap`).
+
+5. Performance : Scalability on PaaS environment
+
+Not evaluated, there is an overhead of 80ms in regards of Flask (100ms instead of 20ms). I am not
+confident with my evaluation here, it's just observation.
+
+6. Support of Subscription
+
+Subscription is not well integrated due to limit of `WSGI` protocol of Flask and Django. I didn't try
+to implement this feature.
+
 
 ## The latest version
 
