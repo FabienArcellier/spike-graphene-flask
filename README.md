@@ -39,6 +39,8 @@ The support of dependency injection to ensure testability requires heavy trick (
 The extension `Flask-graphql` doesn't allow that easily. The context is already used to forward the `request` instance from `Flask`.
 Another option is to inject the dependency container through a singleton (`very crap`).
 
+`Schema` take a class instead of an instance ... :(((((
+
 5. Performance : Scalability on PaaS environment
 
 Not evaluated, there is an overhead of 80ms in regards of Flask (100ms instead of 20ms). I am not

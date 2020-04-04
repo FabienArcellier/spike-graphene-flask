@@ -9,8 +9,7 @@ from graphene_spike.query import Query
 
 class MainTest(unittest.TestCase):
     def setUp(self):
-        query = Query()
-        self.schema = Schema(query=query)
+        self.schema = Schema(query=Query)
         self.client = client = Client(self.schema)
 
     def test_hello_should_work_without_argument(self):
