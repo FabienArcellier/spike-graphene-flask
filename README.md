@@ -1,6 +1,6 @@
 ## implement a graphql service with graphene
 
-[![Build Status](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python.svg?branch=master)](https://travis-ci.org/FabienArcellier/blueprint-cli-multicommands-python)
+![ci](https://github.com/FabienArcellier/spike-graphene-flask/workflows/ci/badge.svg)
 
 The goal of this spike is to implement GraphQL API based on `graphene`.
 
